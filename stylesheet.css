@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#parent { /* Declaration or "selector" */
+    border: 1px solid black;
+    width: 780px;
+    margin: 0 auto;
+}
+
+div#parent section {
+    /*height: 100px;*/
+    border: 1px solid black;
+}
+
+section.sub-head {
+    background: url('files/histHomepic.jpg') top left no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+}
+
+section.main-content-area {
+    /*.main-content-area {*/
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    nav { /* applies to all nav tags found inside (descendants of) section.main-content area */
+        min-height: 20px;
+        border: 1px dotted red;
+        text-align: right;
+        padding-right: 20px;
+        font-size: 11px;
+
+        a { /* this targets all links in each of our navs */
+            margin: 0 5px;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover { /* Pseudo-class declaration */
+                text-decoration: underline;
+            }
+        }
+
+
+        &.bottom {
+            font-size: 9px;
+
+            a {
+                text-transform: lowercase;
+            }
+        }
+    }
+
+    section.brown-box {
+        background-color: #bec4a1;
+        padding: 20px;
+        border-radius: 10px;
+        min-height: 400px;
+        display: flex;
+
+        > * {
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .left-side {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            > * {
+                border: 3px solid black;
+            }
+
+            nav {
+                min-height: 60%;
+            }
+        }
+        .right-side {
+            width: 60%;
+            background-color: white;
+            padding: 10px;
+
+            img {
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            div.more {
+                text-align: right;
+
+                a {
+                    color: red;
+                    text-decoration: none;
+                    font-size: 9px;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+section.footer {
+    background-color: #707a33;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    padding: 8px 0;
+}
+
+h4 {
+    color: red;
+    border-bottom: 2px dashed red;
+    font-weight: unset;
+    margin: 0 0 5px 0;
+}
+
