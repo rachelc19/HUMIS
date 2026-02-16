@@ -6,6 +6,7 @@ div#parent { /* Declaration or "selector" */
     border: 1px solid black;
     width: 780px;
     margin: 0 auto;
+    background-color: #fff;
 }
 
 div#parent section {
@@ -14,7 +15,7 @@ div#parent section {
 }
 
 section.sub-head {
-    background: url('files/histHomepic.jpg') top left no-repeat;
+    background-image: url('files/histHomepic.jpg');
     background-repeat: no-repeat;
     background-position: center;
     height: 50px;
@@ -26,13 +27,19 @@ section.main-content-area {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-image: url("files/uofu_medallion_rt.gif");
+    background-repeat: no-repeat;
+    background-position: bottom right;
 
     nav.secondary { /* applies to all nav tags found inside (descendants of) section.main-content area */
         min-height: 20px;
-        border: 1px dotted red;
-        text-align: right;
+        /*text-align: right;*/
         padding-right: 20px;
         font-size: 11px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 3px;
 
         a { /* this targets all links in each of our navs */
             margin: 0 5px;
@@ -62,6 +69,9 @@ section.main-content-area {
         min-height: 400px;
         display: flex;
         justify-content: space-between;
+        width: 90%;
+        margin: 10px auto 70px;
+
 
         > * {
             /*margin: 10px;*/
