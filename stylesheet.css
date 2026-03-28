@@ -84,8 +84,7 @@ section.main-content-area {
             flex-direction: column;
             justify-content: space-between;
 
-            nav {
-                /*min-height: 60%;*/
+            nav { /*min-height: 60%;*/
                 a {
                     color: black;
                     display: block;

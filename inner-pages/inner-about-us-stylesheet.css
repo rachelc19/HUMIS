@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#parent { /* Declaration or "selector" */
+    border: 1px solid black;
+    width: 780px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+div#parent section {
+    border: 1px solid black;
+    display: flex;
+}
+
+header {
+    display: flex;
+}
+header img {
+    max-width: 100%;
+}
+
+section.subheader {
+    display: flex;
+}
+section.subheader img {
+    max-width: 100%;
+}
+
+section.main-content-area {
+    display: flex;
+    flex-direction: row;
+    min-height: 700px;
+
+    .left-side {
+        border: 1px solid black;
+        width: 25%;
+        background-color: #efeff0;
+        padding: 20px;
+
+        nav {
+            a {
+                color: black;
+                display: block;
+                text-decoration: none;
+                padding: 8px 0 8px 12px;
+                border-bottom: 2px solid #60663e;
+                text-transform: uppercase;
+                font-size: 11px;
+
+                &:hover {
+                    color: white;
+                    background-color: #60663e;
+                }
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    }
+
+    .right-side {
+        border: 1px solid black;
+        width: 75%;
+        nav.secondary {
+            min-height: 20px;
+            padding-right: 20px;
+            font-size: 11px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 3px;
+            a {
+                color: black;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+            }
+
+            &.bottom {
+                font-size: 9px;
+                a {
+                    text-transform: lowercase;
+                }
+            }
+        }
+
+        .right-side-text {
+            padding: 10px 40px 40px 40px;
+            h2 {
+                font-size: 24px;
+                color: #b61131;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 11px;
+            }
+        }
+
+        .right-side-image {
+            float: right;
+            margin: 0 0 20px 15px;
+            max-width: 40%;
+            max-height: 40%;
+        }
+
+
+
+    }
+}
+
+section.main-content-area img {
+    max-width: 100%;
+}
