@@ -10,7 +10,7 @@ div#parent { /* Declaration or "selector" */
 }
 
 div#parent section {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     display: flex;
 }
 
@@ -31,13 +31,17 @@ section.subheader img {
 section.main-content-area {
     display: flex;
     flex-direction: row;
-    min-height: 700px;
+    /*min-height: 700px;*/
 
     .left-side {
-        border: 1px solid black;
+        border-left: 2px solid #b6bb9a;
+        border-right: 2px solid #b6bb9a;
         width: 25%;
         background-color: #efeff0;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         nav {
             a {
@@ -64,7 +68,7 @@ section.main-content-area {
     }
 
     .right-side {
-        border: 1px solid black;
+        /*border: 1px solid black;*/
         width: 75%;
         nav.secondary {
             min-height: 20px;
@@ -93,7 +97,7 @@ section.main-content-area {
             }
         }
 
-        .right-side-text {
+        .right-side-paragraphs {
             padding: 10px 40px 40px 40px;
             h2 {
                 font-size: 24px;
@@ -107,16 +111,33 @@ section.main-content-area {
 
         .right-side-image {
             float: right;
-            margin: 0 0 20px 15px;
-            max-width: 40%;
-            max-height: 40%;
+            margin: 0 0 10px 15px;
+            display: flex;
+            flex-direction: column;
+            max-width: 50%;
+            max-height: 50%;
+
+            h3 {
+                color: #b61131;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 13px;
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
         }
+
 
 
 
     }
 }
 
-section.main-content-area img {
-    max-width: 100%;
+footer {
+    background-color: #707a33;
+    color: white;
+    font-size: 9px;
+    text-align: center;
+    justify-content: center;
+    padding: 8px 0;
 }
